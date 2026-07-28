@@ -1,0 +1,5 @@
+"""EquiBalance – Windows-Desktopanwendung zur Trainingsdokumentation für Pferde."""
+
+from .config import APP_NAME, APP_VERSION
+
+__all__ = ["APP_NAME", "APP_VERSION"]
