@@ -73,7 +73,7 @@ class PferdeView(ttk.Frame):
     def _auswahl_geaendert(self, _event=None) -> None:
         pferd = self._gewaehltes_pferd()
         if pferd:
-            self.app.setze_aktuelles_pferd(pferd, benachrichtigen=True)
+            self.app.setze_aktuelles_pferd(pferd, benachrichtigen=False)
         self._zeichne_steckbrief(pferd)
 
     def neu(self) -> None:
@@ -110,6 +110,7 @@ class PferdeView(ttk.Frame):
 
     # ----------------------------------------------------------- Aktualisierung
     def aktualisieren(self) -> None:
+        print("PferdeView aktualisieren")
         self._pferde = self.app.pferd_repo.liste(
             inklusive_archiviert=self.var_archiv.get()
         )
